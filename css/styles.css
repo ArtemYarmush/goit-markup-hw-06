@@ -769,19 +769,37 @@ img {
   letter-spacing: 0.03em;
   color: var(--color-title);
 }
-.modal-input {
+.modal-name {
+  margin-bottom: 4px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.1666;
+  letter-spacing: 0.01em;
+  color: var(--color-text);
+}
+.input-data {
+  position: relative;
   margin-bottom: 10px;
+}
+.modal-input {
   width: 100%;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  padding-left: 12px;
+  padding-left: 42px;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.1666;
   letter-spacing: 0.01em;
   color: var(--color-title);
+}
+.modal-icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 .modal-button-send {
   width: 200px;
