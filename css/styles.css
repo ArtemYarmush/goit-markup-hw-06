@@ -727,6 +727,7 @@ img {
   position: absolute;
   transform: translate(-50%, -50%) translateX(0px);
   transition: transform var(--transition-hover-focus);
+  padding: 40px;
   top: 50%;
   left: 50%;
   width: 528px;
@@ -736,6 +737,12 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) translateX(-600px);
 }
@@ -753,8 +760,39 @@ img {
   background: var(--color-footer-logo);
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
+.modal-title {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--color-title);
+}
+.modal-input {
+  margin-bottom: 10px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 12px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.1666;
+  letter-spacing: 0.01em;
+  color: var(--color-title);
+}
+.modal-button-send {
+  width: 200px;
+  height: 50px;
+  background: var(--color-hover-focus);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  color: var(--color-footer-logo);
+  border: 0;
 }
