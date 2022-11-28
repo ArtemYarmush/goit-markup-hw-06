@@ -39,7 +39,19 @@ body {
   font-family: "Roboto", sans-serif;
   color: #212121;
 }
-
+.hide {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  word-wrap: normal !important;
+}
 img {
   display: block;
 }
@@ -809,8 +821,6 @@ img {
 .modal-input:focus + .modal-icon {
   fill: var(--color-hover-focus);
 }
-.textarea-data {
-}
 .modal-textarea {
   padding: 12px 16px;
   width: 100%;
@@ -826,6 +836,45 @@ img {
 }
 .modal-textarea:focus {
   border-color: var(--color-hover-focus);
+}
+.policy {
+  margin-top: 20px;
+}
+.modal-policy {
+}
+.check-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7142;
+  letter-spacing: 0.03em;
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.check-text span {
+  width: 16px;
+  height: 15px;
+  border-radius: 2px;
+  border: solid var(--color-title);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+}
+.modal-policy:checked + .check-text span {
+  background-color: var(--color-hover-focus);
+  border: none;
+}
+
+.policy-contract {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7142;
+  letter-spacing: 0.03em;
+  color: var(--color-hover-focus);
 }
 .modal-button-send {
   width: 200px;
