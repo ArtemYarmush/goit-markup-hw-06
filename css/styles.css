@@ -824,6 +824,13 @@ img {
   background: var(--color-footer-logo);
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
+.modal-button-icon {
+  transition: fill var(--transition-hover-focus);
+}
+.modal-button:hover .modal-button-icon,
+.modal-button:focus .modal-button-icon {
+  fill: var(--color-hover-focus);
+}
 .modal-title {
   margin-bottom: 12px;
   font-weight: 700;
@@ -833,12 +840,10 @@ img {
   letter-spacing: 0.03em;
   color: var(--color-title);
 }
-.modal-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+/*form------------------------------------------------------*/
+
 .modal-name {
+  display: block;
   margin-bottom: 4px;
   font-style: normal;
   font-weight: 400;
@@ -852,19 +857,19 @@ img {
   margin-bottom: 10px;
 }
 .modal-input {
-  max-width: 528px;
-  width: 100%;
+  width: 448px;
   height: 40px;
   outline: transparent;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
-  padding-left: 42px;
+  padding: 12px 42px;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.1666;
   letter-spacing: 0.01em;
   color: var(--color-title);
+  transition: border-color var(--transition-hover-focus);
 }
 .modal-input:focus {
   border-color: var(--color-hover-focus);
@@ -887,15 +892,16 @@ img {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.1666;
-  color: var(--color-textarea);
+  color: var(--color-title);
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: border-color var(--transition-hover-focus);
 }
 .modal-textarea:focus {
   border-color: var(--color-hover-focus);
 }
 .policy {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .modal-policy {
 }
@@ -909,12 +915,14 @@ img {
   display: flex;
   align-items: center;
   position: relative;
+  justify-content: center;
 }
 .check-text span {
   width: 16px;
   height: 15px;
   border-radius: 2px;
-  border: solid var(--color-title);
+  border: 2px solid var(--color-title);
+  margin-right: 7px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -922,11 +930,11 @@ img {
 }
 .modal-policy:checked + .check-text span {
   background-color: var(--color-hover-focus);
-  border: none;
+  fill: var(--color-footer-logo);
+  border-color: transparent;
 }
 
 .policy-contract {
-  display: block;
   margin-left: 5px;
   font-style: normal;
   font-weight: 400;
@@ -934,9 +942,13 @@ img {
   line-height: 1.7142;
   letter-spacing: 0.03em;
   color: var(--color-hover-focus);
+  position: relative;
+  display: inline-block;
+  transition: color var(--transition-hover-focus);
 }
 .modal-button-send {
-  width: 200px;
+  cursor: pointer;
+  min-width: 200px;
   height: 50px;
   outline: transparent;
   background: var(--color-hover-focus);
@@ -948,4 +960,10 @@ img {
   letter-spacing: 0.06em;
   color: var(--color-footer-logo);
   border: 0;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  margin-top: 30px;
+  transition: background var(--transition-hover-focus);
 }
