@@ -561,14 +561,14 @@ img {
   color: var(--color-hover-focus);
 }
 /*social-input----------------------------------------------------*/
-.mailing-list {
+.email-list {
   margin-left: 93px;
 }
 
-.mailing-list-group {
+.email-list-group {
   display: flex;
 }
-.mailing-list-input {
+.email-list-input {
   width: 358px;
   height: 50px;
   margin-right: 12px;
@@ -580,12 +580,12 @@ img {
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
 }
-.mailing-list-input:hover,
-.mailing-list-input:focus {
+.email-list-input:hover,
+.email-list-input:focus {
   outline: 0;
   outline-offset: 0;
 }
-.mailing-list-button {
+.email-list-button {
   width: 200px;
   height: 50px;
   display: flex;
@@ -604,16 +604,18 @@ img {
   border: 0;
   cursor: pointer;
 }
-.mailing-list-button:hover,
-.mailing-list-button:focus {
+.email-list-button:hover,
+.email-list-button:focus {
   background: var(--color-hover-focus);
 }
-.mailing-list-icon {
+.email-list-icon {
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
   fill: var(--color-footer-logo);
 }
 /*section join-----------------------------------------*/
 .join {
-  padding-top: 12px;
   margin-left: 70px;
 }
 .join-title {
@@ -903,8 +905,6 @@ img {
 .policy {
   margin-top: 10px;
 }
-.modal-policy {
-}
 .check-text {
   font-style: normal;
   font-weight: 400;
@@ -932,6 +932,9 @@ img {
   background-color: var(--color-hover-focus);
   fill: var(--color-footer-logo);
   border-color: transparent;
+}
+.check-text span {
+  transition: fill var(--transition-hover-focus);
 }
 
 .policy-contract {
